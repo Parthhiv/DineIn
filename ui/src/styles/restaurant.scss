@@ -1,0 +1,119 @@
+.restaurant {
+
+    .rest-container {
+        padding: 80px 0;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        gap: 50px;
+        margin-top: 30px;
+        width: 100%;
+        flex-wrap: wrap;
+
+        .leftContainer {
+            display: flex;
+            width: 40%;
+            gap: 20px;
+            flex-direction: column;
+
+            @media screen and (max-width:600px){
+                width: 80%;
+            }
+
+            .other-details {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 20px;
+                padding: 20px 0;
+                border-top: 2px solid var(--bright-pink);
+                border-bottom: 2px solid var(--bright-pink);
+
+                span {
+                    color: var(--maroon);
+                    font-weight: 700;
+                }
+            }
+
+            .reservation-box {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                background-color: var(--cream);
+                padding: 20px;
+                align-items: center;
+                gap: 20px;
+
+                .form-input {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    
+                    label {
+                        font-size: 1.2rem;
+                        font-weight: 700;
+                    }
+
+                    input {
+                        width: 200px;
+                        font-size: 1rem;
+                        padding: 5px;
+                    }
+
+                    select {
+                        width: 200px;
+                        padding: 5px;
+                    }
+                }
+
+                button {
+                    width: 200px;
+                    padding: 10px;
+                    outline: none;
+                    border: none;
+                    cursor: pointer;
+                    background-color: var(--magenta);
+                    color: white;
+                    border-radius: 20px;
+                    font-size: 1rem;
+                    font-weight: 700;
+                }
+            }
+        }
+    
+        .rightContainer {
+            display: flex;
+            width: 40%;
+            align-items: center;
+            gap: 50px;
+            flex-direction: column;
+
+            .arrows {
+                display: flex;
+                gap: 10px;
+                font-size: 1.7rem;
+                margin-top: 20px;
+                color: var(--orange);
+                justify-content: center;
+
+                .arrow {
+                    cursor: pointer;
+                }
+            }
+
+            @media screen and (max-width:600px){
+                width: 80%;
+            }
+        }
+    }
+}
+.norestaurants {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    padding: 200px;
+    color: #eb9a9a;
+    font-weight: bold;
+    font-size: 50px;
+    background-color: var(--red);
+}

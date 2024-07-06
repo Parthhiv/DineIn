@@ -1,0 +1,70 @@
+.reservation-card {
+    width: 40%;
+    height: fit-content;
+    background-color: var(--cream);
+    display: flex;
+    gap: 100px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+
+    .icon {
+        font-size: 30px;
+        color: var(--red);
+        width: 10%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+            transform: translateY(-2px);
+            color: var(--maroon);
+        }
+    }
+
+    .details {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 70%;
+        .res-name {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            h1 {
+                color: var(--magenta);
+            }
+    
+            button {
+                padding: 10px 20px;
+                text-align: center;
+                border: none;
+                background-color: var(--light-orange);
+                cursor: pointer;
+                font-size: 1.025rem;
+                transition: all  0.3s ease;
+    
+                &:hover {
+                    background-color: var(--orange);
+                    color: white;
+                }
+            }
+    
+        }
+    
+        .res-details {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+
+            p {
+                font-size: 1.2rem;
+                font-weight: 800;
+                color: var(--maroon);
+            }
+        }
+    }
+}

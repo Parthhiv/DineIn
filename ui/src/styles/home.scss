@@ -1,0 +1,80 @@
+.home {
+    background-color: var(--light-orange);
+}
+
+.search {
+    position: relative;
+    background-color: var(--orange);
+    height: 300px;
+    background-size: cover;
+}
+
+.searchBackground #surfer {
+    background-attachment: fixed;
+    background-size: cover;
+    height: 800px;
+    width: 100%;
+    filter: brightness(60%);
+}
+
+.searchBar {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.searchBar h2 {
+    color: white;
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.searchInput {
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 50px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.searchInput input {
+    border: none;
+    height: 40px;
+    width: 70%;
+    padding: 0 10px;
+}
+
+.searchInput input:focus {
+    outline: none;
+}
+
+.searchInput .icon {
+    cursor: pointer;
+}
+
+.searchedPosts {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 50px 0;
+    gap: 50px;
+}
+
+#loading {
+    width: 20px;
+    height: 20px;
+  }
+
+
+@media screen and (max-width: 700px) {
+    .searchInput {
+        width: 300px;
+    }
+
+}

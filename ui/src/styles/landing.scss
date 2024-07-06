@@ -1,0 +1,48 @@
+.landing {
+    background-color: var(--cream);
+    height: 100vh;
+    position: relative;
+
+    .text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        border: 7px solid var(--bright-pink);
+        padding: 50px;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+    
+        p {
+            font-size: 3rem;
+    
+    
+            span {
+                color: var(--magenta);
+                font-weight: 800;
+                font-style: italic;
+            }
+        }
+    
+        button {
+            font-size: 1.5rem;
+            padding: 30px 50px;
+            border: none;
+            outline: none;
+            background-color: var(--orange);
+            color: white;
+            border-radius: 40px;
+            cursor: pointer;
+            transition: all ease-in-out 0.3s;
+    
+            &:hover {
+                transform: translateY(-5px);
+                background-color: var(--bright-pink);
+            }
+        }
+    }
+    
+}

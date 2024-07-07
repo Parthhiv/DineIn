@@ -22,8 +22,9 @@ const Landing = () => {
       {
         user ? null : (
           <div className='landing'>
+            <div className="overlay"></div>
             <div className="text">
-              <p>Welcome to <span>DineIn</span> !</p>
+              <p>Welcome to <span>DineIn</span>!</p>
               <Link to="/adminLogin">
                 <button>Login as Admin</button>
               </Link>
@@ -31,6 +32,9 @@ const Landing = () => {
                 <button>Login as User</button>
               </Link>
             </div>
+            <footer>
+              <p>Contact us: +123 456 7890 | Email: info@dinein.com</p>
+            </footer>
           </div>
         )
       }

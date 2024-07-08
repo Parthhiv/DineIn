@@ -33,7 +33,7 @@ const Landing = () => {
               </Link>
             </div>
             <footer>
-              <p>Contact us: +123 456 7890 | Email: info@dinein.com</p>
+              <p>Contact us: +123 456 7890 | Email: dinein@gmail.com</p>
             </footer>
           </div>
         )

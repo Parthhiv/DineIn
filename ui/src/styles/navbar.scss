@@ -19,7 +19,6 @@
     z-index: 100;
 }
 
-
 .navLogo {
     color: white;
     font-family: "Rubik Doodle Shadow", system-ui;
@@ -30,40 +29,32 @@
 
 .navbar ul {
     list-style: none;
+    display: flex;
+    gap: 10px; // Adjust spacing as needed
 }
 
 .navbar ul li {
     position: relative;
-    float: left;
 }
 
-.profilePicture {
-    height: 40px;
-    width: 40px;
+.navbar a {
+    text-decoration: none;
 }
 
-.profilePicture img {
-    margin-top: 10px;
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-#usernamename {
-    display: none;
-}
-
-.navbar ul li p {
+.navbar p {
     font-size: 1rem;
     padding: 20px;
     color: white;
     display: block;
-    transition: all 1s;
+    transition: all 0.3s;
 }
 
-.navbar ul li p:hover {
+.navbar p:hover {
     transform: translateY(-1px);
+    border-bottom: solid 2px white;
+}
+
+.active-link p {
     border-bottom: solid 2px white;
 }
 
@@ -77,8 +68,12 @@
     cursor: pointer;
     display: none;
 }
+#username{
+    margin: 1px;
+    padding: 0px;
+}
 
-@media (max-width:800px) {
+@media (max-width: 800px) {
     .navContainer {
         height: 70px;
     }
@@ -99,23 +94,12 @@
         width: 100%;
     }
 
-    .profilePicture {
-        display: none;
-    }
-
-    #usernamename {
-        font-weight: bolder;
-        display: block;
-    }
-
-    .navbar ul li p {
+    .navbar p {
         color: black;
     }
 
-    .navbar ul li p:hover {
-        transform: translateY(-1px);
-
-        border-bottom: none;
+    .active-link p {
+        border-bottom: solid 2px black;
     }
 
     .navbar ul li {
@@ -125,4 +109,19 @@
     #menu-bar:checked~.navbar {
         left: 0;
     }
+}
+
+.profilePicture {
+    padding-top: 15px;
+    padding-left: 0;
+    gap: 1px;
+    height: 30px; 
+    width: 30px;  
+}
+
+.profilePicture img {
+    height: 100%; 
+    width: 100%;  
+    border-radius: 50%;
+    object-fit: cover; 
 }

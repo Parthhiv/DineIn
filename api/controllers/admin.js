@@ -26,16 +26,15 @@ export const registeradmin = async (req, res, next) => {
 export const loginadmin = async (req, res, next) => {
     try {
         const admin = await Admin.findOne({ username: req.body.username })
-        if (!admin) return next(createError(404, "User not found"))
+        if (!admin) return res.status(400).json({ message: 'Admin not found' });
 
         const isCorrectPassword = await bcrypt.compare(req.body.password, admin.password);
-        if (!isCorrectPassword) return next(createError(400, "Username or Password incorrect"));
+        if (!isCorrectPassword) return res.status(400).json({ message: 'Username or Password incorrect' });
 
         const token = jwt.sign({ id: admin._id }, process.env.JWT)
 
         const { password, ...otherDetails } = admin._doc;
-        res
-            .cookie("access_token", token, {
+        res.cookie("access_token", token, {
                 httpOnly: true,
             })
             .status(200)

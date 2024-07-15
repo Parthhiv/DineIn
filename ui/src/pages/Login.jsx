@@ -22,7 +22,7 @@ function Login({type}) {
     "user": "/user/home"
   }
 
-  const { dispatch } = useContext(AuthContext);
+  const { dispatch,user } = useContext(AuthContext);
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -31,6 +31,10 @@ function Login({type}) {
 
   const handleClick = async (e) => {
     e.preventDefault();
+    if(user!=null){
+      alert("You Need to Logout First");
+      return;
+    }
     dispatch({ type: "LOGIN_START" });
     try {
       const res = await axios.post(urls[type], credentials);
@@ -38,10 +42,9 @@ function Login({type}) {
       navigate(landings[type]);
     } catch (err) {
       if (err.response && err.response.data) {
-        // If error response and data exist, dispatch LOGIN_FAILURE with error message
         dispatch({ type: "LOGIN_FAILURE", payload: err.response.data });
+        alert(err.response.data.message);
       } else {
-        // If no error response or data, dispatch generic error message
         dispatch({ type: "LOGIN_FAILURE", payload: "An error occurred while logging in" });
       }
     }

@@ -137,7 +137,7 @@ const Restaurant = () => {
               )}
               <div className="form-input">
                 <label htmlFor="people">People</label>
-                <input type="number" id="people" onChange={handleChange} />
+                <input type="number" id="people" min="1" onChange={handleChange} />
               </div>
               <button onClick={handleClick}>Make Reservation</button>
             </div>
